@@ -1,5 +1,9 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/NavBar";
+import HomePage from "./components/HomePage";
+import LoginPage from "./components/LoginPage";
+import SignupPage from "./components/SignupPage";
+import ProfilePage from "./components/ProfilePage";
 
 function App() {
   return (
