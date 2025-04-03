@@ -1,22 +1,20 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./components/NavBar";
-import HomePage from "./components/HomePage";
-import LoginPage from "./components/LoginPage";
-import SignupPage from "./components/SignupPage";
-import ProfilePage from "./components/ProfilePage";
+import React from "react";
+import { Provider } from "react-redux";
+import Router from "./common/router/Router";
+import store from "./store/index";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { PersistGate } from "redux-persist/integration/react";
 
-function App() {
+const App: React.FC = () => {
   return (
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/signup" element={<SignupPage />} />
-        <Route path="/profile" element={<ProfilePage />} />
-      </Routes>
-    </Router>
+    <div className="App">
+      <Provider store={store}>
+        <Router />
+        <ToastContainer />
+      </Provider>
+    </div>
   );
-}
+};
 
 export default App;

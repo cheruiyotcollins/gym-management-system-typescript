@@ -1,54 +1,49 @@
-# React + TypeScript + Vite
+## React Products APP
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- Simple APP to show how to use TypeScript and Redux.
+- Use [FakeStoreAPI](https://fakestoreapi.com/docs) to fetch the products and display them.
 
-Currently, two official plugins are available:
+### Requirements:
+- Nodejs
+- Yarn (as dependency manager) `npm i -g yarn`
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+##### Installation
 
-## Expanding the ESLint configuration
+> The application can be installed using the following steps:
+- Clone the repository: `git clone git@github.com:sadhakbj/React-products---2022.git app`
+- Change the directory to the cloned repository: `cd app`
+- Install dependencies: `yarn` `(npm install) if yarn is not installed`
+- Run the application: `yarn start`
+- Open the application: `http://localhost:3000`
+- Running tests: `yarn test`
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+#### Login Credentials:
+- We have used FakeStoreAPI for the basic authentication.
+- You can use the following credentials to login: `username: "mor_2314", password: "83r5^_"`
+- Or you can use credentials from the [USERS API](https://fakestoreapi.com/users)
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+#### Features:
+> [Demo video](https://www.awesomescreenshot.com/video/7273651?key=5899809315d7f53cd60467c1e3ae8c8a)
+- Show a login page if the user is not logged in.
+- Allow user to login and logout.
+- Show a list of products with the details (title, price, rating, image)
+  - Search the products by name
+  - Sort the products by (rating, price asc to desc, price desc to asc)
+  - filter the products by categories 
+  > Since, fakeStoreAPI does not provide functionalities like: `searching, sorting and filtering` we have used our own implementation in JavaScript.
+- Bookmark / un-bookmark a product
+- View the details of the product
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+#### Tools Used:
+- [React](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [React-Router v6](https://reactrouter.com/docs/en/v6/getting-started/overview) 
+- [TailwindCSS](https://tailwindcss.com/) - A utility-first CSS framework for styled components
+- [Redux](https://redux.js.org/)
+- [React-Redux](https://react-redux.js.org/)
+- [HeadlessUI for React](https://headlessui.dev/)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+#### Code Quality and formatting
+- Code quality: [ESLint](https://eslint.org/)
+- Code formatting: [Prettier](https://prettier.io/)
+> Make sure that you have prettier & eslint plugin installed for your IDE and settings is changed to format on save..
