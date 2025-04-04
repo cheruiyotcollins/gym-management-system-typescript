@@ -154,21 +154,6 @@ const Navbar: React.FC = () => {
               </div>
               {isLoggedIn ? (
                 <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                  {/* Cart Button */}
-                  <Link to="/cart" className="relative mr-4">
-                    <button
-                      type="button"
-                      className="bg-gray-800 p-1 rounded-full text-gray-400 hover:text-white"
-                    >
-                      <ShoppingCartIcon className="h-6 w-6" />
-                    </button>
-                    {cartItemCount > 0 && (
-                      <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full px-1">
-                        {cartItemCount}
-                      </span>
-                    )}
-                  </Link>
-
                   {/* Notification Button */}
                   <button
                     type="button"
@@ -210,18 +195,6 @@ const Navbar: React.FC = () => {
                               }`}
                             >
                               Your Profile
-                            </Link>
-                          )}
-                        </Menu.Item>
-                        <Menu.Item>
-                          {({ active }) => (
-                            <Link
-                              to={`/orders`} // <-- Added Orders Link here
-                              className={`block px-4 py-2 text-sm text-gray-700 ${
-                                active ? "bg-gray-100" : ""
-                              }`}
-                            >
-                              Your Orders
                             </Link>
                           )}
                         </Menu.Item>
