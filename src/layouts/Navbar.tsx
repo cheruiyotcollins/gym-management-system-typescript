@@ -103,9 +103,9 @@ const Navbar: React.FC = () => {
                           View Bookings
                         </Link>
                         <Link
-                          to="/home"
+                          to="/attendance"
                           className={classNames(
-                            isActive("/booking-table")
+                            isActive("/attendance")
                               ? "bg-gray-900 text-white"
                               : "text-gray-300 hover:bg-gray-700 hover:text-white",
                             "px-3 py-2 rounded-md text-sm font-medium"
@@ -114,9 +114,9 @@ const Navbar: React.FC = () => {
                           Attendance Record
                         </Link>
                         <Link
-                          to="/home"
+                          to="/attendance"
                           className={classNames(
-                            isActive("/home")
+                            isActive("/attendance")
                               ? "bg-gray-900 text-white"
                               : "text-gray-300 hover:bg-gray-700 hover:text-white",
                             "px-3 py-2 rounded-md text-sm font-medium"
