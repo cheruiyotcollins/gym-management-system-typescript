@@ -114,9 +114,9 @@ const Navbar: React.FC = () => {
                           Attendance Record
                         </Link>
                         <Link
-                          to="/attendance"
+                          to="/make-payment"
                           className={classNames(
-                            isActive("/attendance")
+                            isActive("/make-payment")
                               ? "bg-gray-900 text-white"
                               : "text-gray-300 hover:bg-gray-700 hover:text-white",
                             "px-3 py-2 rounded-md text-sm font-medium"
@@ -125,9 +125,9 @@ const Navbar: React.FC = () => {
                           Make Payment
                         </Link>
                         <Link
-                          to="/home"
+                          to="/make-payment"
                           className={classNames(
-                            isActive("/home")
+                            isActive("/make-payment")
                               ? "bg-gray-900 text-white"
                               : "text-gray-300 hover:bg-gray-700 hover:text-white",
                             "px-3 py-2 rounded-md text-sm font-medium"
