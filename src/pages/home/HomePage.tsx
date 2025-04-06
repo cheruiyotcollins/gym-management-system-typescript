@@ -11,7 +11,7 @@ const HomePage = () => {
           Modern Gym Management Powered by React & TypeScript
         </p>
         <button className="mt-8 bg-orange-500 hover:bg-orange-600 px-8 py-3 rounded-lg font-semibold transition">
-          Get Started
+          Not Registered Yet?? Click Here
         </button>
       </header>
 
