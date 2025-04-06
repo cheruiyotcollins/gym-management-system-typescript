@@ -15,6 +15,7 @@ import BookingPage from "../../pages/bookings/BookingPage";
 import BookinTablePage from "../../pages/bookings/BookinsTablePage";
 import AttendancePage from "../../pages/attendance/AtttendanceRecord";
 import MakePaymentPage from "../../pages/payments/MakePaymentPage";
+import ViewPaymentsPage from "../../pages/payments/ViewPaymentsPage";
 
 const ProtectedRoute = () => {
   const isLoggedIn = useSelector((state: RootState) => state.auth.isLoggedIn);
@@ -40,6 +41,7 @@ const Router = () => {
           <Route path="/booking-table" element={<BookinTablePage />} />
           <Route path="/attendance" element={<AttendancePage />} />
           <Route path="/make-payment" element={<MakePaymentPage />} />
+          <Route path="/payments" element={<ViewPaymentsPage />} />
         </Route>
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
