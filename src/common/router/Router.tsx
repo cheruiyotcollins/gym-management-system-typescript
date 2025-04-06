@@ -12,6 +12,7 @@ import HomePage from "../../pages/home/HomePage";
 import CheckoutPage from "../../pages/carts/CheckoutPage";
 import Orders from "../../pages/Orders/Orders";
 import BookingPage from "../../pages/bookings/BookingPage";
+import BookinTablePage from "../../pages/bookings/BookinsTablePage";
 
 const ProtectedRoute = () => {
   const isLoggedIn = useSelector((state: RootState) => state.auth.isLoggedIn);
@@ -34,6 +35,7 @@ const Router = () => {
           <Route path="/orders" element={<Orders />} />
           <Route path="/home/:id" element={<Details />} />
           <Route path="/booking" element={<BookingPage />} />
+          <Route path="/booking-table" element={<BookinTablePage />} />
         </Route>
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
