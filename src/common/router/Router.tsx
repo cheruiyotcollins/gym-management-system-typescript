@@ -7,8 +7,8 @@ import Navbar from "../../layouts/Navbar";
 import Login from "../../pages/auth/Login";
 import Cart from "../../pages/carts/CartPage";
 import Register from "../../pages/auth/Register";
-import Details from "../../pages/products/Details";
-import Products from "../../pages/products/Index";
+import Details from "../../pages/home/Details";
+import HomePage from "../../pages/home/HomePage";
 import CheckoutPage from "../../pages/carts/CheckoutPage";
 import Orders from "../../pages/Orders/Orders";
 
@@ -27,11 +27,11 @@ const Router = () => {
         <Route path="/" element={<Login />} />
         <Route path="/signup" element={<Register />} />
         <Route element={<ProtectedRoute />}>
-          <Route path="/products" element={<Products />} />
+          <Route path="/home" element={<HomePage />} />
           <Route path="/checkout" element={<CheckoutPage />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/orders" element={<Orders />} />
-          <Route path="/products/:id" element={<Details />} />
+          <Route path="/home/:id" element={<Details />} />
         </Route>
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>

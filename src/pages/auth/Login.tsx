@@ -22,13 +22,13 @@ const Login: React.FC = () => {
 
   useEffect(() => {
     if (isLoggedIn) {
-      navigate("/products");
+      navigate("/home");
     }
   }, [isLoggedIn, navigate]);
 
   const handleOnSuccess = () => {
     setLoading(false);
-    navigate("/products");
+    navigate("/home");
   };
 
   const handleLogin = async (e: React.FormEvent) => {

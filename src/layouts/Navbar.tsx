@@ -70,9 +70,9 @@ const Navbar: React.FC = () => {
                     {isLoggedIn ? (
                       <>
                         <Link
-                          to="/products"
+                          to="/home"
                           className={classNames(
-                            isActive("/products")
+                            isActive("/home")
                               ? "bg-gray-900 text-white"
                               : "text-gray-300 hover:bg-gray-700 hover:text-white",
                             "px-3 py-2 rounded-md text-sm font-medium"
@@ -81,9 +81,9 @@ const Navbar: React.FC = () => {
                           Home
                         </Link>
                         <Link
-                          to="/products"
+                          to="/home"
                           className={classNames(
-                            isActive("/products")
+                            isActive("/home")
                               ? "bg-gray-900 text-white"
                               : "text-gray-300 hover:bg-gray-700 hover:text-white",
                             "px-3 py-2 rounded-md text-sm font-medium"
@@ -92,9 +92,9 @@ const Navbar: React.FC = () => {
                           Book
                         </Link>
                         <Link
-                          to="/products"
+                          to="/home"
                           className={classNames(
-                            isActive("/products")
+                            isActive("/home")
                               ? "bg-gray-900 text-white"
                               : "text-gray-300 hover:bg-gray-700 hover:text-white",
                             "px-3 py-2 rounded-md text-sm font-medium"
@@ -103,9 +103,9 @@ const Navbar: React.FC = () => {
                           View Bookings
                         </Link>
                         <Link
-                          to="/products"
+                          to="/home"
                           className={classNames(
-                            isActive("/products")
+                            isActive("/home")
                               ? "bg-gray-900 text-white"
                               : "text-gray-300 hover:bg-gray-700 hover:text-white",
                             "px-3 py-2 rounded-md text-sm font-medium"
@@ -114,9 +114,9 @@ const Navbar: React.FC = () => {
                           Attendance Record
                         </Link>
                         <Link
-                          to="/products"
+                          to="/home"
                           className={classNames(
-                            isActive("/products")
+                            isActive("/home")
                               ? "bg-gray-900 text-white"
                               : "text-gray-300 hover:bg-gray-700 hover:text-white",
                             "px-3 py-2 rounded-md text-sm font-medium"
@@ -125,9 +125,9 @@ const Navbar: React.FC = () => {
                           Make Payment
                         </Link>
                         <Link
-                          to="/products"
+                          to="/home"
                           className={classNames(
-                            isActive("/products")
+                            isActive("/home")
                               ? "bg-gray-900 text-white"
                               : "text-gray-300 hover:bg-gray-700 hover:text-white",
                             "px-3 py-2 rounded-md text-sm font-medium"
@@ -234,16 +234,16 @@ const Navbar: React.FC = () => {
             <div className="px-2 pt-2 pb-3 space-y-1">
               {isLoggedIn ? (
                 <Link
-                  to="/products"
+                  to="/home"
                   className={classNames(
-                    isActive("/products")
+                    isActive("/home")
                       ? "bg-gray-900 text-white"
                       : "text-gray-300 hover:bg-gray-700 hover:text-white",
                     "block px-3 py-2 rounded-md text-base font-medium"
                   )}
-                  aria-current={isActive("/products") ? "page" : undefined}
+                  aria-current={isActive("/home") ? "page" : undefined}
                 >
-                  Products
+                  Home
                 </Link>
               ) : (
                 <Link
